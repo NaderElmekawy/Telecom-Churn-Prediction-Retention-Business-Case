@@ -15,7 +15,10 @@ Can "Company A" reduce customer losses by prioritizing outreach to subscribers w
 - Merged on `Customer_ID` (one-to-one): 100,000 unique customers, 100 columns
 - Churn rate: **49.56%** (balanced target)
 
-> The data files are **not included** in this repository. Place them in a `telecom/` folder and update the paths in the notebook.
+Both data files are included in this repository:
+
+- `Client.csv` is stored as a regular CSV.
+- `Record.zip` is a compressed copy of `Record.csv`. **Unzip it before running the notebook**, because the code reads `Record.csv`.
 
 ## Approach
 
@@ -61,15 +64,31 @@ Python, pandas, NumPy, scikit-learn, matplotlib, seaborn. Developed in Google Co
 
 ## How to Run
 
-1. Open `NaderElmekawy.ipynb` in Google Colab or Jupyter.
-2. Add `Client.csv` and `Record.csv` to a `telecom/` folder.
-3. Update the data paths in the first code cell. The notebook currently mounts Google Drive with a course-specific path.
-4. Run all cells.
+1. Clone or download this repository:
+   ```bash
+   git clone https://github.com/USERNAME/REPO.git
+   cd REPO
+   ```
+2. Unzip the record data so that `Record.csv` sits next to `Client.csv`:
+   ```bash
+   unzip Record.zip
+   ```
+3. Open `NaderElmekawy.ipynb` in Google Colab or Jupyter.
+4. Update the data paths in the first code cell. The notebook currently mounts Google Drive and uses a course-specific folder path. Replace it with the location of `Client.csv` and `Record.csv`, for example:
+   ```python
+   client = pd.read_csv("Client.csv")
+   record = pd.read_csv("Record.csv")
+   ```
+5. Run all cells.
+
+**Dependencies:** `pip install numpy pandas matplotlib seaborn scikit-learn`
 
 ## Repository Structure
 
 ```
 .
 ├── NaderElmekawy.ipynb   # Full analysis and business case
+├── Client.csv            # Customer and demographic attributes
+├── Record.zip            # Zipped Record.csv (usage, billing, churn target)
 └── README.md
 ```
