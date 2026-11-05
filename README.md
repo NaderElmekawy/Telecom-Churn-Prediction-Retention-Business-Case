@@ -2,7 +2,6 @@
 
 A machine learning notebook that predicts which telecom subscribers are likely to churn 31-60 days after the observation date, and turns those predictions into a retention-campaign business case with financial sensitivity analysis.
 
-**Author:** Nader Elmekawy
 
 ## Business Question
 
@@ -15,10 +14,6 @@ Can "Company A" reduce customer losses by prioritizing outreach to subscribers w
 - Merged on `Customer_ID` (one-to-one): 100,000 unique customers, 100 columns
 - Churn rate: **49.56%** (balanced target)
 
-Both data files are included in this repository:
-
-- `Client.csv` is stored as a regular CSV.
-- `Record.zip` is a compressed copy of `Record.csv`. **Unzip it before running the notebook**, because the code reads `Record.csv`.
 
 ## Approach
 
