@@ -58,7 +58,7 @@ Python · pandas · NumPy · scikit-learn · Matplotlib · Google Colab
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/NaderElmekawy/REPOSITORY-NAME.git
+   git clone https://github.com/NaderElmekawy/Telecom-Churn-Prediction-Retention-Business-Case.git
    ```
 
 2. Extract `Record.zip` so that `Record.csv` is available.
